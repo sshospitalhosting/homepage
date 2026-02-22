@@ -341,7 +341,7 @@ export default function App() {
           />
           <div className="gallery">
             <div className="imgbox big">
-              <img src={pic2} alt="Hospital building" />
+              <img src={pic1} alt="Hospital building" />
               <div className="label">Hospital Building</div>
             </div>
 
@@ -359,7 +359,7 @@ export default function App() {
                 <div className="label">Care with Compassion</div>
               </div>
               <div className="imgbox" style={{ height: 162 }}>
-                <img src={pic1} alt="Facilities view" />
+                <img src={pic2} alt="Facilities view" />
                 <div className="label">Modern Infrastructure</div>
               </div>
             </div>
