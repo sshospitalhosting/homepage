@@ -20,7 +20,57 @@ const GITHUB_BRANCH = "main"; // change to "master" if needed
 const GITHUB_API = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents`;
 const RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/${GITHUB_BRANCH}`;
 const IMAGE_EXTS = /\.(jpe?g|png|gif|webp|svg|bmp)$/i;
+// ─── Notification ticker config ───────────────────────────────────────────
+const TICKER_RAW_URL =
+  "https://raw.githubusercontent.com/sshospitalhosting/notifications/main/file.txt";
 
+// ─── NotificationTicker component ─────────────────────────────────────────
+function NotificationTicker() {
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    fetch(TICKER_RAW_URL + "?cache=" + Date.now())
+      .then((r) => r.text())
+      .then((txt) => setMessage(txt.trim()))
+      .catch(() => {});
+  }, []);
+
+  if (!message) return null;
+
+  const display = `⭐ ${message} ⭐`;
+
+  return (
+    <div style={{
+      background: "#FFD700",
+      overflow: "hidden",
+      whiteSpace: "nowrap",
+      borderBottom: "1.5px solid #e6b800",
+      height: 36,
+      display: "flex",
+      alignItems: "center",
+    }}>
+      <style>{`
+        @keyframes ticker-scroll {
+          0%   { transform: translateX(100vw); }
+          100% { transform: translateX(-100%); }
+        }
+        .ticker-text {
+          display: inline-block;
+          animation: ticker-scroll 22s linear infinite;
+          font-weight: 700;
+          font-size: 14px;
+          color: #1a1a1a;
+          letter-spacing: 0.01em;
+          padding-right: 80px;
+        }
+        .ticker-text:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+      <span className="ticker-text">{display}</span>
+    </div>
+  );
+}
 // ─── Contact ────────────────────────────────────────────────────────────────
 const CONTACT = {
   address: "313, Kapurthala Road, Near Tata Motors, Basti Bawa Khel, Jalandhar – 144021",
@@ -457,7 +507,8 @@ export default function App() {
           </div>
         </div>
       </header>
-
+{/* NOTIFICATION TICKER */}
+      <NotificationTicker />
       {/* HERO */}
       <section className="hero">
         <div className="container">
