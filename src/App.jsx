@@ -125,9 +125,10 @@ export default function App() {
 
   const doctors = useMemo(
     () => [
+            { name: "Dr. Ajay Yadav", qual: "MD (Chest Medicine)", note: "Pulmonology / Chest", photo: ajay },
       { name: "Dr. Rajesh Yadav", qual: "BDS (Dental)", note: "Dental OPD", photo: rajesh },
       { name: "Late Sh. Dr. R K Yadav", qual: "Founder", note: "Legacy of compassionate care", photo: rkyadav },
-      { name: "Dr. Ajay Yadav", qual: "MD (Chest Medicine)", note: "Pulmonology / Chest", photo: ajay },
+
       { name: "Dr. Avi Badhan", qual: "MS (Orthopedics)", note: "Orthopedics", photo: avib },
       { name: "Dr. Mayank Khullar", qual: "MD (Paediatrics)", note: "Paediatrics", photo: mayankk },
     ],
