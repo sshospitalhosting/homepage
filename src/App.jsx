@@ -12,6 +12,7 @@ import rkyadav from "./assets/rkyadav.png";
 import ajay from "./assets/ajay.png";
 import avib from "./assets/avib.png";
 import mayankk from "./assets/mayankk.png";
+import monica from "./assets/monica.png";
 
 // ─── GitHub image repo config ──────────────────────────────────────────────
 const GITHUB_USER = "sshospitalhosting";
@@ -456,6 +457,7 @@ export default function App() {
     { name: "Late Sh. Dr. R K Yadav", qual: "Founder", note: "Legacy of compassionate care", photo: rkyadav },
     { name: "Dr. Ajay Yadav", qual: "MD (Chest Medicine)", note: "Pulmonology / Chest", photo: ajay },
     { name: "Dr. Rajesh Yadav", qual: "BDS (Dental)", note: "Dental OPD", photo: rajesh },
+    { name: "Dr. Monica Yadav", qual: "BDS (Dental)", note: "Dental OPD", photo: monica },
     { name: "Dr. Avi Badhan", qual: "MS (Orthopedics)", note: "Orthopedics", photo: avib },
     { name: "Dr. Mayank Khullar", qual: "MD (Paediatrics)", note: "Paediatrics", photo: mayankk },
   ], []);
