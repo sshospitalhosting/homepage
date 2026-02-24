@@ -469,11 +469,15 @@ export default function App() {
     },
     {
       title: "E‑Prescription", badge: "Paperless", tone: "purple",
-      items: ["Digital Prescriptions", "WhatsApp Delivery", "Eco‑friendly records"],
+      items: ["Digital Prescriptions", "WhatsApp Delivery", "Eco‑Friendly Records"],
     },
     {
       title: "Online Consultation", badge: "Remote", tone: "pink",
       items: ["Video Consultation", "Audio Consultation", "Follow‑up Care"],
+    },
+    {
+      title: "Procedures", badge: "Convenient", tone: "tick",
+      items: ["Bronchoscopy", "Torpey", "Thoko", "Thoracoscopy", "Lung Function Test", "Spirometry", "FOT", "Pleural", "Tapping", "FNAC", "Chest Tube Insertion"],
     },
   ], []);
 
